@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMI calculator</title>
+    <link rel="stylesheet" href="EMI.css">
+<body>
+<center>
+    <div style="width: 297px;height: 400px;margin-top: 4%;border-radius: 0px;border: none" class="card">
+        <div class="card-body">
+            <div class="calculator">
+                <h1 style="margin-top: 6%">EMI CALCULATOR</h1>
+                <br>
+                <img src="/assets/emi.png" style="width: 40%">
+                <br><br>
+                <input type="number" style="width: 300px;border-radius: 0px;height:30px;font-size: large" id="amount" placeholder="Enter your Principal amount" required>
+                <br><br>
+                <input type="number" style="width: 300px;border-radius: 0px;height: 30px;font-size: large" id="interest" placeholder="Enter rate of interest(%)" required>
+                <br><br>
+                <input type="number" style="width: 300px;border-radius: 0px;height: 30px;font-size: large" id="year" placeholder="Enter Loan tenture" required>
+                <br><br>
+                <button onclick="calculate()" style="border-radius: 0px;margin-top: 1%;margin-left: 3%;background-color: deepskyblue;height: 50px;width: 100px;font-size: large" id="btn" class="btn btn-success">Calculate</button><br><br>
+                <textarea id="currentAge"></textarea>
+            </div>
+        </div>
+    </div>
+</center>
+<script>
+    function calculate(){
+        var p=parseInt(document.getElementById("amount").value)
+        var r=parseFloat(document.getElementById("interest").value)/100/12
+        var t=parseInt(document.getElementById("year").value)*12
+        var emi=(p*r*Math.pow(1+r,t))/(Math.pow(1+r,t)-1);
+        document.getElementById("currentAge").innerHTML=`Your EMI is ₹ ${emi.toFixed(2)} per month.`
+    }
+</script>
+</body>
+</html>

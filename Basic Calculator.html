@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+<center>
+
+    <div style="width: 297px;height: 400px;margin-top: 6%;border-radius: 0px;border: none" class="card">
+        <div class="card-body">
+            <div class="calculator">
+                <h4>Basic Calculator</h4>
+                <input type="text" id="output" class="form-control" style="background-color: #d8e2f6">
+                <br>
+        <table>
+            <tr>
+                <td><button onclick="fun('7')"class="output">7</button></td>
+                <td><button onclick="fun('8')"class="output">8</button></td>
+                <td><button onclick="fun('9')" class="output">9</button></td>
+                <td><button onclick="fun('+')" class="output">+</button></td>
+                <td><button onclick="clearScreen()" class="output">C</button> </td>
+            </tr>
+            <tr>
+                <td><button onclick="fun('4')" class="output">4</button></td>
+                <td><button onclick="fun('5')" class="output">5</button></td>
+                <td><button onclick="fun('6')" class="output">6</button></td>
+                <td><button onclick="fun('-')" class="output">-</button></td>
+                <td><button onclick="backspace()" class="output">del</button> </td>
+            </tr>
+            <tr>
+                <td><button onclick="fun('1')" class="output">1</button></td>
+                <td><button onclick="fun('2')" class="output">2</button></td>
+                <td><button onclick="fun('3')" class="output">3</button></td>
+                <td><button onclick="fun('*')" class="output">*</button></td>
+                <td><button onclick="fun('%')" class="output">%</button> </td>
+            </tr>
+            <tr>
+                <td><button onclick="fun('00')" class="output">00</button></td>
+                <td><button onclick="fun('0')" class="output">0</button></td>
+                <td><button onclick="fun('.')" class="output">.</button></td>
+                <td><button onclick="calc()" class="output">=</button></td>
+                <td><button onclick="fun('/')" class="output">/</button></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    </div>
+</center>
+<script>
+    function fun(value) {
+        document.getElementById("output").value +=value;
+    }
+    function clearScreen() {
+        document.getElementById("output").value = null;
+    }
+    function  backspace () {
+        val = document.getElementById("output").value
+        len = (val.length) - 1
+        val = val.slice(0, len)
+        document.getElementById("output").value = val
+
+    }
+    function calc() {
+        val=document.getElementById("output").value
+        val=eval(val)
+        document.getElementById("output").value=val
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
