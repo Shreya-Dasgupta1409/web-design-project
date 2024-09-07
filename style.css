@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    color: #333;
+}
+
+.container img {
+    width: 200px;
+    height: auto;
+
+}
+
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.hero .btn {
+    font-size: 1.25rem;
+    padding: 10px 30px;
+}
+
+/* About Me Section */
+.about-me {
+    padding: 60px 0;
+}
+.about-me img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.about-me h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.about-me p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.progress-bar {
+    background-color: #ffc107;
+    font-size: 1rem;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 0;
+}
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.projects .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.projects .card:hover {
+    transform: translateY(-5px);
+}
+.projects .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.projects .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+}
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.contact .form-control {
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+.contact .btn {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 20px;
+}
+.contact .btn:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #efcb3e;
+    padding: 20px 0;
+}
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #fff;
+}
+.img-fluid rounded-circle{
+    border-radius: 40%;
+    width:150px;
+    height: 100px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .about-me h2, .skills h2, .projects h2, .contact h2 {
+        font-size: 2rem;
+    }
+}
+
+
